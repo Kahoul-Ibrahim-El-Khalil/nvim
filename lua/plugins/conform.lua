@@ -8,7 +8,9 @@ return {
     },
     formatters = {
       clang_format = {
-        prepend_args = { "--style=LLVM" }, -- or "LLVM", "Microsoft", etc
+        -- No `--style` here, so it uses .clang-format from your project root
+        -- You can still add other args if needed, e.g. fallback style
+        prepend_args = { "--fallback-style=LLVM" },
       },
     },
   },
